@@ -2,29 +2,114 @@ body {
     font-family: 'Comic Sans MS';
     text-align: center;
     margin: 0px;
+    background-color: black;
+    color: white;
 }
 
 #main {
-    flex-direction: column;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 h1 {
     font-size: 40pt;
 }
 
-#gameWindow canvas {
-    z-index: 1;
-    position: absolute;
-    border:  1px dashed red;
+#gameWindow {
+    position: relative;
+    z-index: 100;
+    border: 1px dashed red;
     width: 1500px;
     height: 700px;
+    background-color: white;
 }
 
+/*  Puzzle DIV  */
 #puzzleGame {
+    position: relative;
     z-index: 2;
-    position: absolute;
+    width: 550px;
+    height: 950px;
     background-color: black;
     color: white;
+    border: white solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+#puzzleGame p {
+    width: 500px;
+}
+
+
+/*  ////////////// Puzzle Tiles //////////////////  */
+
+.tile1,
+.tile2,
+.tile3,
+.tile4,
+.tile5,
+.tile6,
+.tile7,
+.tile8,
+.tile9 {
+    display: table-cell;
+    width: 170px;
+    height: 266px;
+    border: 1px solid white;
+    background: url('../images/puzzle/birmingham-museums-trust-sJr8LDyEf7k-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: 510px 800px;
+    cursor: pointer;
+    vertical-align: center;
+}
+
+.tile1 {
+    background-position: left top;
+}
+
+.tile2 {
+    background-position: center top;
+}
+
+.tile3 {
+    background-position: right top;
+}
+
+.tile4 {
+    background-position: left center;
+}
+
+.tile5 {
+    background-position: center center;
+}
+
+.tile6 {
+    background-position: right center;
+}
+
+.tile7 {
+    background-position: left bottom;
+}
+
+.tile8 {
+    background-position: center bottom;
+}
+
+.tile9 {
+    background: darkslateblue;
+    cursor: default;
+}
+
+/*  ////////////////// END Puzzle Tiles ///////////////  */
+
+.buttons {
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+}
