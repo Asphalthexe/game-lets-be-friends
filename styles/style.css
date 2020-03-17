@@ -27,6 +27,17 @@ h1 {
     background-color: white;
 }
 
+/* Console Text field */
+#console {
+    width: 1490px;
+    height: 140px;
+    background-color: darkslateblue;
+    padding: 5px;
+}
+
+
+
+
 /*  Puzzle DIV  */
 #puzzleGame {
     position: relative;
